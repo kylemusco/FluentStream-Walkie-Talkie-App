@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "51435B75-C1AD-42DB-85F8-6DBF4631F89B"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "502D68D0-9FBD-4AF3-97BE-4138451BB0BF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FluentStream/Managers/ChatManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "getChatForUsers(user1:user2:chats:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "502D68D0-9FBD-4AF3-97BE-4138451BB0BF - e84b1c5872b66f35"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FluentStream.ChatManager.getChatForUsers(user1: Swift.String, user2: Swift.String) -&gt; Swift.Optional&lt;FluentStream.Chat&gt;"
+                  moduleName = "FluentStream"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kylemusco/Documents/FluentStream/FluentStream/FluentStream/Managers/ChatManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "220">
+               </Location>
+               <Location
+                  uuid = "502D68D0-9FBD-4AF3-97BE-4138451BB0BF - 4b3eccd73ea03da5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FluentStreamTests.ChatManager.getChatForUsers(user1: Swift.String, user2: Swift.String) -&gt; Swift.Optional&lt;FluentStreamTests.Chat&gt;"
+                  moduleName = "FluentStreamTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kylemusco/Documents/FluentStream/FluentStream/FluentStream/Managers/ChatManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "220">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ABD0AE5A-CD3A-42D2-B736-297E266D69C4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FluentStream/Managers/ChatManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "getChatForUsers(user1:user2:chats:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "ABD0AE5A-CD3A-42D2-B736-297E266D69C4 - e84b1c5872b66f14"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FluentStream.ChatManager.getChatForUsers(user1: Swift.String, user2: Swift.String) -&gt; Swift.Optional&lt;FluentStream.Chat&gt;"
+                  moduleName = "FluentStream"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kylemusco/Documents/FluentStream/FluentStream/FluentStream/Managers/ChatManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "104">
+               </Location>
+               <Location
+                  uuid = "ABD0AE5A-CD3A-42D2-B736-297E266D69C4 - 4b3eccd73ea03d84"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FluentStreamTests.ChatManager.getChatForUsers(user1: Swift.String, user2: Swift.String) -&gt; Swift.Optional&lt;FluentStreamTests.Chat&gt;"
+                  moduleName = "FluentStreamTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kylemusco/Documents/FluentStream/FluentStream/FluentStream/Managers/ChatManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "104">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
