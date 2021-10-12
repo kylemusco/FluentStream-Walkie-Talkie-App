@@ -17,12 +17,18 @@ class ChatManager: ObservableObject {
         willSet { objectWillChange.send() }
     }
     
+    @Published var isLoading: Bool = false {
+        willSet { objectWillChange.send() }
+    }
+    
     init() {
         self.getMessages()
     }
     
     // Queries "/history" endpoint for messages
     func getMessages() {
+        isLoading = true
+        
         URLSession.shared.dataTask(with: URL(string:Constants.URL + "/history")!) { (data, response, error) in
             guard let data = data, error == nil else {
                 print("Error querying history")
@@ -45,6 +51,7 @@ class ChatManager: ObservableObject {
                     let messages = try decoder.decode([Message].self, from: data)
                     
                     self.chats = self.sortMessagesIntoChats(messages: messages)
+                    self.isLoading = false
                 } catch {
                     print("Error decoding messages: ", error)
                 }
