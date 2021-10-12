@@ -16,6 +16,7 @@ struct SearchBar: View {
                 .foregroundColor(.gray)
             
             TextField("Search", text: $searchText)
+                .modifier(ClearButton(text: $searchText))
                 .disableAutocorrection(true)
                 .accentColor(.gray)
         }

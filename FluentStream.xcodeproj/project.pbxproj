@@ -33,6 +33,7 @@
 		55BF3A632715117C0036B223 /* PullToRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BF3A622715117C0036B223 /* PullToRefreshView.swift */; };
 		55BF3A6527151BBB0036B223 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BF3A6427151BBB0036B223 /* SearchBar.swift */; };
 		55BF3A6727151D2E0036B223 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BF3A6627151D2E0036B223 /* Colors.swift */; };
+		55BF3A69271523B90036B223 /* ClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BF3A68271523B90036B223 /* ClearButton.swift */; };
 		55E4064B2715001D00F8036A /* ChatViewLoadingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E4064A2715001D00F8036A /* ChatViewLoadingAnimation.swift */; };
 		55F6BE74270FB51A00243799 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F6BE73270FB51A00243799 /* ChatView.swift */; };
 		55F6BE75270FB51A00243799 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F6BE73270FB51A00243799 /* ChatView.swift */; };
@@ -102,6 +103,7 @@
 		55BF3A622715117C0036B223 /* PullToRefreshView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullToRefreshView.swift; sourceTree = "<group>"; };
 		55BF3A6427151BBB0036B223 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		55BF3A6627151D2E0036B223 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		55BF3A68271523B90036B223 /* ClearButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearButton.swift; sourceTree = "<group>"; };
 		55E4064A2715001D00F8036A /* ChatViewLoadingAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewLoadingAnimation.swift; sourceTree = "<group>"; };
 		55F6BE73270FB51A00243799 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		55F6BE7B270FB7D400243799 /* AdminChatItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminChatItem.swift; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 				55E4064A2715001D00F8036A /* ChatViewLoadingAnimation.swift */,
 				55BF3A622715117C0036B223 /* PullToRefreshView.swift */,
 				55BF3A6427151BBB0036B223 /* SearchBar.swift */,
+				55BF3A68271523B90036B223 /* ClearButton.swift */,
 			);
 			path = Chats;
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 				55E4064B2715001D00F8036A /* ChatViewLoadingAnimation.swift in Sources */,
 				55BF3A5F27150B300036B223 /* Waveforms.swift in Sources */,
 				55F6BE9E270FDD8E00243799 /* MessageItem.swift in Sources */,
+				55BF3A69271523B90036B223 /* ClearButton.swift in Sources */,
 				557FD5CC270E918B002B188F /* Chat.swift in Sources */,
 				55F6BE99270FDA7700243799 /* AdminMessageView.swift in Sources */,
 				55BF3A6527151BBB0036B223 /* SearchBar.swift in Sources */,
