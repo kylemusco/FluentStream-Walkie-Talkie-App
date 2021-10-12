@@ -7,10 +7,23 @@
 
 import SwiftUI
 
+let coloredNavAppearance = UINavigationBarAppearance()
+
 struct ChatView: View {
     @ObservedObject var chatManager = ChatManager.shared
     
     @State var searchText: String = ""
+    
+    init() {
+        // Sets NavigationView header to blue
+        coloredNavAppearance.configureWithOpaqueBackground()
+        coloredNavAppearance.backgroundColor = .systemBlue
+        coloredNavAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        coloredNavAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        
+        UINavigationBar.appearance().standardAppearance = coloredNavAppearance
+        UINavigationBar.appearance().scrollEdgeAppearance = coloredNavAppearance
+    }
     
     var body: some View {
         NavigationView {
