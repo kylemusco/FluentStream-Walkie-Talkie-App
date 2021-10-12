@@ -11,8 +11,7 @@ struct ChatUser: View {
     var user: String
     
     var body: some View {
-        Text(user)
-            .fontWeight(.medium)
+        BoldText(text: user)
             .frame(maxWidth: .infinity, alignment: .leading)
     }
 }

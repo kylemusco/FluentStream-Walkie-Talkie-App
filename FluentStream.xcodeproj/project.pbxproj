@@ -27,6 +27,9 @@
 		557FD5DC270E93B2002B188F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557FD5DA270E93B2002B188F /* Constants.swift */; };
 		557FD5DD270E93B2002B188F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557FD5DA270E93B2002B188F /* Constants.swift */; };
 		55BF3A5B271506EA0036B223 /* BoldText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BF3A5A271506EA0036B223 /* BoldText.swift */; };
+		55BF3A5D271508840036B223 /* ChatTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BF3A5C271508840036B223 /* ChatTime.swift */; };
+		55BF3A5F27150B300036B223 /* Waveforms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BF3A5E27150B300036B223 /* Waveforms.swift */; };
+		55BF3A6127150D460036B223 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BF3A6027150D460036B223 /* PlayButton.swift */; };
 		55E4064B2715001D00F8036A /* ChatViewLoadingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E4064A2715001D00F8036A /* ChatViewLoadingAnimation.swift */; };
 		55F6BE74270FB51A00243799 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F6BE73270FB51A00243799 /* ChatView.swift */; };
 		55F6BE75270FB51A00243799 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F6BE73270FB51A00243799 /* ChatView.swift */; };
@@ -90,6 +93,9 @@
 		557FD5D5270E9275002B188F /* ChatManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatManager.swift; sourceTree = "<group>"; };
 		557FD5DA270E93B2002B188F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		55BF3A5A271506EA0036B223 /* BoldText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoldText.swift; sourceTree = "<group>"; };
+		55BF3A5C271508840036B223 /* ChatTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTime.swift; sourceTree = "<group>"; };
+		55BF3A5E27150B300036B223 /* Waveforms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Waveforms.swift; sourceTree = "<group>"; };
+		55BF3A6027150D460036B223 /* PlayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
 		55E4064A2715001D00F8036A /* ChatViewLoadingAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewLoadingAnimation.swift; sourceTree = "<group>"; };
 		55F6BE73270FB51A00243799 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		55F6BE7B270FB7D400243799 /* AdminChatItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminChatItem.swift; sourceTree = "<group>"; };
@@ -237,9 +243,10 @@
 		55F6BE7F270FBA6300243799 /* Styles */ = {
 			isa = PBXGroup;
 			children = (
-				55F6BE80270FBA8500243799 /* ChatUser.swift */,
-				55F6BE84270FBB2C00243799 /* ChatDate.swift */,
 				55BF3A5A271506EA0036B223 /* BoldText.swift */,
+				55F6BE84270FBB2C00243799 /* ChatDate.swift */,
+				55BF3A5C271508840036B223 /* ChatTime.swift */,
+				55F6BE80270FBA8500243799 /* ChatUser.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -250,6 +257,8 @@
 				55F6BE9D270FDD8E00243799 /* MessageItem.swift */,
 				55F6BEA1270FDF9500243799 /* MessageView.swift */,
 				55F6BE98270FDA7700243799 /* AdminMessageView.swift */,
+				55BF3A6027150D460036B223 /* PlayButton.swift */,
+				55BF3A5E27150B300036B223 /* Waveforms.swift */,
 			);
 			path = Messages;
 			sourceTree = "<group>";
@@ -385,9 +394,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				557FD5D6270E9275002B188F /* ChatManager.swift in Sources */,
+				55BF3A6127150D460036B223 /* PlayButton.swift in Sources */,
 				557FD5C8270E90E0002B188F /* Message.swift in Sources */,
 				55BF3A5B271506EA0036B223 /* BoldText.swift in Sources */,
 				55E4064B2715001D00F8036A /* ChatViewLoadingAnimation.swift in Sources */,
+				55BF3A5F27150B300036B223 /* Waveforms.swift in Sources */,
 				55F6BE9E270FDD8E00243799 /* MessageItem.swift in Sources */,
 				557FD5CC270E918B002B188F /* Chat.swift in Sources */,
 				55F6BE99270FDA7700243799 /* AdminMessageView.swift in Sources */,
@@ -398,6 +409,7 @@
 				55F6BEA2270FDF9500243799 /* MessageView.swift in Sources */,
 				55F6BE8D270FBFDA00243799 /* Extensions.swift in Sources */,
 				55F6BE74270FB51A00243799 /* ChatView.swift in Sources */,
+				55BF3A5D271508840036B223 /* ChatTime.swift in Sources */,
 				557FD59D270E903D002B188F /* FluentStreamApp.swift in Sources */,
 				55F6BE7C270FB7D400243799 /* AdminChatItem.swift in Sources */,
 				557FD5DB270E93B2002B188F /* Constants.swift in Sources */,
