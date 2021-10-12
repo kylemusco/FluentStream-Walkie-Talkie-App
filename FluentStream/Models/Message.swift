@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Message: Codable {
+struct Message: Codable, Hashable {
     var id: Int
     var timestamp: Date
     var username_from: String?
