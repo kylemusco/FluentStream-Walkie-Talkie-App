@@ -14,16 +14,21 @@ struct ChatView: View {
     
     var body: some View {
         NavigationView {
-            List {
+            ScrollView {
+                // Handles swipe down gesture to trigger refresh
+                PullToRefreshView(coordinateSpaceName: "pullToRefresh") {
+                    self.chatManager.getMessages()
+                }
+                
                 // Display loading message if app is loading chats
                 if (chatManager.isLoading) {
                     ChatViewLoadingAnimation()
                 }
                 // Otherwise display chats
                 else {
-                    // TODO: Create custom search bar
-                    TextField("Search", text: $searchText)
-                        .disableAutocorrection(true)
+                    SearchBar(searchText: $searchText)
+                        .padding(.leading, 20)
+                        .padding(.trailing, 20)
                     
                     ForEach(chatManager.chats.filter {
                         searchText.isEmpty || $0.filter(searchText)
@@ -34,9 +39,13 @@ struct ChatView: View {
                         } label: {
                             AdminChatItem(chat: chat)
                         }
+                        .padding(.leading, -70)
+                        .padding(.trailing, -70)
+                        .buttonStyle(PlainButtonStyle())
                     }
                 }
             }
+            .coordinateSpace(name: "pullToRefresh")
             .navigationBarTitle("Chats")
         }
         
