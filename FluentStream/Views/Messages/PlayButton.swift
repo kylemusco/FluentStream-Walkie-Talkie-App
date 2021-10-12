@@ -17,7 +17,6 @@ struct PlayButton: View {
         VStack {
             if (!self.isPlaying) {
                 Button(action: {
-                    print("Play")
                     self.audioPlayer.play()
                     self.isPlaying = true
                 }) {
@@ -29,7 +28,6 @@ struct PlayButton: View {
                 }
             } else {
                 Button(action: {
-                    print("Pause")
                     self.audioPlayer.pause()
                     self.isPlaying = false
                 }) {
