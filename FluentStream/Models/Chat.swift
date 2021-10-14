@@ -31,4 +31,8 @@ class Chat: NSObject {
             dateAsString.contains(predicate)
         )
     }
+    
+    func filterByUser(_ user: String) -> Bool {
+        return self.user1.lowercased() == user.lowercased() || self.user2.lowercased() == user.lowercased()
+    }
 }

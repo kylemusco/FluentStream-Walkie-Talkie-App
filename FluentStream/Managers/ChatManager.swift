@@ -22,11 +22,11 @@ class ChatManager: ObservableObject {
     }
     
     init() {
-        self.getMessages()
+        self.getMessages(true)
     }
     
     // Queries "/history" endpoint for messages
-    func getMessages() {
+    func getMessages(_ isAdmin: Bool) {
         isLoading = true
         
         URLSession.shared.dataTask(with: URL(string:Constants.URL + "/history")!) { (data, response, error) in
@@ -51,6 +51,13 @@ class ChatManager: ObservableObject {
                     let messages = try decoder.decode([Message].self, from: data)
                     
                     self.chats = self.sortMessagesIntoChats(messages: messages)
+                    
+                    if (!isAdmin) {
+                        self.chats = self.chats.filter {
+                            $0.filterByUser("kyle_ski")
+                        }
+                    }
+                    
                     self.isLoading = false
                 } catch {
                     print("Error decoding messages: ", error)

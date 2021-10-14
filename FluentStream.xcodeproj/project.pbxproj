@@ -26,6 +26,10 @@
 		557FD5DB270E93B2002B188F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557FD5DA270E93B2002B188F /* Constants.swift */; };
 		557FD5DC270E93B2002B188F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557FD5DA270E93B2002B188F /* Constants.swift */; };
 		557FD5DD270E93B2002B188F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557FD5DA270E93B2002B188F /* Constants.swift */; };
+		55B0F4F22717B90000E246F0 /* UserMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B0F4F12717B90000E246F0 /* UserMenu.swift */; };
+		55B0F4F42717C64500E246F0 /* UserMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B0F4F32717C64500E246F0 /* UserMessageView.swift */; };
+		55B0F4F62717C73900E246F0 /* UserChatItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B0F4F52717C73900E246F0 /* UserChatItem.swift */; };
+		55B0F4F82717CAFD00E246F0 /* ChatDateSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B0F4F72717CAFD00E246F0 /* ChatDateSmall.swift */; };
 		55BF3A5B271506EA0036B223 /* BoldText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BF3A5A271506EA0036B223 /* BoldText.swift */; };
 		55BF3A5D271508840036B223 /* ChatTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BF3A5C271508840036B223 /* ChatTime.swift */; };
 		55BF3A5F27150B300036B223 /* Waveforms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BF3A5E27150B300036B223 /* Waveforms.swift */; };
@@ -96,6 +100,10 @@
 		557FD5CB270E918B002B188F /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		557FD5D5270E9275002B188F /* ChatManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatManager.swift; sourceTree = "<group>"; };
 		557FD5DA270E93B2002B188F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		55B0F4F12717B90000E246F0 /* UserMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMenu.swift; sourceTree = "<group>"; };
+		55B0F4F32717C64500E246F0 /* UserMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMessageView.swift; sourceTree = "<group>"; };
+		55B0F4F52717C73900E246F0 /* UserChatItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserChatItem.swift; sourceTree = "<group>"; };
+		55B0F4F72717CAFD00E246F0 /* ChatDateSmall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDateSmall.swift; sourceTree = "<group>"; };
 		55BF3A5A271506EA0036B223 /* BoldText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoldText.swift; sourceTree = "<group>"; };
 		55BF3A5C271508840036B223 /* ChatTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTime.swift; sourceTree = "<group>"; };
 		55BF3A5E27150B300036B223 /* Waveforms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Waveforms.swift; sourceTree = "<group>"; };
@@ -205,8 +213,8 @@
 		557FD5C6270E90C7002B188F /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				557FD5C7270E90E0002B188F /* Message.swift */,
 				557FD5CB270E918B002B188F /* Chat.swift */,
+				557FD5C7270E90E0002B188F /* Message.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -232,12 +240,14 @@
 		55E406492715000100F8036A /* Chats */ = {
 			isa = PBXGroup;
 			children = (
-				55F6BE73270FB51A00243799 /* ChatView.swift */,
 				55F6BE7B270FB7D400243799 /* AdminChatItem.swift */,
+				55F6BE73270FB51A00243799 /* ChatView.swift */,
 				55E4064A2715001D00F8036A /* ChatViewLoadingAnimation.swift */,
+				55BF3A68271523B90036B223 /* ClearButton.swift */,
 				55BF3A622715117C0036B223 /* PullToRefreshView.swift */,
 				55BF3A6427151BBB0036B223 /* SearchBar.swift */,
-				55BF3A68271523B90036B223 /* ClearButton.swift */,
+				55B0F4F52717C73900E246F0 /* UserChatItem.swift */,
+				55B0F4F12717B90000E246F0 /* UserMenu.swift */,
 			);
 			path = Chats;
 			sourceTree = "<group>";
@@ -256,6 +266,7 @@
 			children = (
 				55BF3A5A271506EA0036B223 /* BoldText.swift */,
 				55F6BE84270FBB2C00243799 /* ChatDate.swift */,
+				55B0F4F72717CAFD00E246F0 /* ChatDateSmall.swift */,
 				55BF3A5C271508840036B223 /* ChatTime.swift */,
 				55F6BE80270FBA8500243799 /* ChatUser.swift */,
 				55BF3A6627151D2E0036B223 /* Colors.swift */,
@@ -266,10 +277,11 @@
 		55F6BE9C270FDBF800243799 /* Messages */ = {
 			isa = PBXGroup;
 			children = (
+				55F6BE98270FDA7700243799 /* AdminMessageView.swift */,
 				55F6BE9D270FDD8E00243799 /* MessageItem.swift */,
 				55F6BEA1270FDF9500243799 /* MessageView.swift */,
-				55F6BE98270FDA7700243799 /* AdminMessageView.swift */,
 				55BF3A6027150D460036B223 /* PlayButton.swift */,
+				55B0F4F32717C64500E246F0 /* UserMessageView.swift */,
 				55BF3A5E27150B300036B223 /* Waveforms.swift */,
 			);
 			path = Messages;
@@ -413,20 +425,24 @@
 				55BF3A5F27150B300036B223 /* Waveforms.swift in Sources */,
 				55F6BE9E270FDD8E00243799 /* MessageItem.swift in Sources */,
 				55BF3A69271523B90036B223 /* ClearButton.swift in Sources */,
+				55B0F4F22717B90000E246F0 /* UserMenu.swift in Sources */,
 				557FD5CC270E918B002B188F /* Chat.swift in Sources */,
 				55F6BE99270FDA7700243799 /* AdminMessageView.swift in Sources */,
 				55BF3A6527151BBB0036B223 /* SearchBar.swift in Sources */,
 				55F6BE85270FBB2C00243799 /* ChatDate.swift in Sources */,
+				55B0F4F82717CAFD00E246F0 /* ChatDateSmall.swift in Sources */,
 				55F6BE81270FBA8500243799 /* ChatUser.swift in Sources */,
 				55BF3A632715117C0036B223 /* PullToRefreshView.swift in Sources */,
 				55BF3A6727151D2E0036B223 /* Colors.swift in Sources */,
 				55F6BE89270FBB7C00243799 /* DateFormatterUtility.swift in Sources */,
 				557FD59F270E903D002B188F /* ContentView.swift in Sources */,
 				55F6BEA2270FDF9500243799 /* MessageView.swift in Sources */,
+				55B0F4F62717C73900E246F0 /* UserChatItem.swift in Sources */,
 				55F6BE8D270FBFDA00243799 /* Extensions.swift in Sources */,
 				55F6BE74270FB51A00243799 /* ChatView.swift in Sources */,
 				55BF3A5D271508840036B223 /* ChatTime.swift in Sources */,
 				557FD59D270E903D002B188F /* FluentStreamApp.swift in Sources */,
+				55B0F4F42717C64500E246F0 /* UserMessageView.swift in Sources */,
 				55F6BE7C270FB7D400243799 /* AdminChatItem.swift in Sources */,
 				557FD5DB270E93B2002B188F /* Constants.swift in Sources */,
 			);

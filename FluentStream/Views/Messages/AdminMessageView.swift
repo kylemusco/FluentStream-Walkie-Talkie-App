@@ -18,15 +18,13 @@ struct AdminMessageView: View {
                 BoldText(text: chat.user2)
             }
             .frame(height: 10)
-            
-            // TODO: Fix this
-            .padding(.top, -50)
-            
+            .padding(.bottom, 30)
             
             MessageView(messages: chat.messages, currentUser: chat.user2)
         }
         .padding(20)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .navigationTitle("Messages")
         
         Spacer()
         

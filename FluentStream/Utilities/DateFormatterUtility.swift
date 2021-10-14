@@ -26,7 +26,7 @@ class DateFormatterUtility {
     
     private static let timeFormatter: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.dateFormat = "hh:mm"
+        formatter.dateFormat = "hh:mm a"
         return formatter
     }()
 }

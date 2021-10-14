@@ -13,6 +13,11 @@ struct ChatView: View {
     @ObservedObject var chatManager = ChatManager.shared
     
     @State var searchText: String = ""
+    @State var isAdmin: Bool = true {
+        didSet {
+            self.chatManager.getMessages(self.isAdmin)
+        }
+    }
     
     init() {
         // Sets NavigationView header to blue
@@ -20,6 +25,11 @@ struct ChatView: View {
         coloredNavAppearance.backgroundColor = .systemBlue
         coloredNavAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
         coloredNavAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        
+        let buttonAppearance = UIBarButtonItemAppearance()
+            buttonAppearance.normal.titleTextAttributes = [.foregroundColor : UIColor.white]
+        
+        coloredNavAppearance.backButtonAppearance = buttonAppearance
         
         UINavigationBar.appearance().standardAppearance = coloredNavAppearance
         UINavigationBar.appearance().scrollEdgeAppearance = coloredNavAppearance
@@ -30,7 +40,7 @@ struct ChatView: View {
             ScrollView {
                 // Handles swipe down gesture to trigger refresh
                 PullToRefreshView(coordinateSpaceName: "pullToRefresh") {
-                    self.chatManager.getMessages()
+                    self.chatManager.getMessages(isAdmin)
                 }
                 
                 // Display loading message if app is loading chats
@@ -46,11 +56,19 @@ struct ChatView: View {
                     ForEach(chatManager.chats.filter {
                         searchText.isEmpty || $0.filter(searchText)
                     }, id:\.self) { chat in
-                        // Having this as a NavigationLink creates an empty space at the top of AdminMessageView
+                        
                         NavigationLink {
-                            AdminMessageView(chat: chat)
+                            if (self.isAdmin) {
+                                AdminMessageView(chat: chat)
+                            } else {
+                                UserMessageView(chat: chat)
+                            }
                         } label: {
-                            AdminChatItem(chat: chat)
+                            if (self.isAdmin) {
+                                AdminChatItem(chat: chat)
+                            } else {
+                                UserChatItem(chat: chat)
+                            }
                         }
                         .padding(.leading, -70)
                         .padding(.trailing, -70)
@@ -60,9 +78,23 @@ struct ChatView: View {
             }
             .coordinateSpace(name: "pullToRefresh")
             .navigationBarTitle("Chats")
+            .toolbar {
+                // Add user management button
+                ToolbarItemGroup(placement: .navigationBarTrailing) {
+                    Menu {
+                        Button("Admin", action: {
+                            self.isAdmin = true
+                        })
+                        Button("kyle_ski", action: {
+                            self.isAdmin = false
+                        })
+                    } label: {
+                        Label("", systemImage: "person.crop.circle")
+                            .foregroundColor(.white)
+                    }
+                }
+            }
         }
-        
-        // https://stephenf.codes/blog/how-to-make-custom-list-rows
     }
 }
 
