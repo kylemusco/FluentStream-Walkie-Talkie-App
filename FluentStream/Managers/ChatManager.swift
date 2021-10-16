@@ -11,6 +11,8 @@ import Combine
 class ChatManager: ObservableObject {
     static let shared = ChatManager()
     
+    private let userName = "kyle_ski"
+    
     let objectWillChange = PassthroughSubject<Void, Never>()
     
     @Published var chats = [Chat]() {
@@ -50,11 +52,11 @@ class ChatManager: ObservableObject {
                     
                     let messages = try decoder.decode([Message].self, from: data)
                     
-                    self.chats = self.sortMessagesIntoChats(messages: messages)
+                    self.chats = self.sortMessagesIntoChats(messages, isAdmin)
                     
                     if (!isAdmin) {
                         self.chats = self.chats.filter {
-                            $0.filterByUser("kyle_ski")
+                            $0.filterByUser(self.userName)
                         }
                     }
                     
@@ -66,7 +68,7 @@ class ChatManager: ObservableObject {
         }.resume()
     }
     
-    func sortMessagesIntoChats(messages: [Message]) -> [Chat] {
+    func sortMessagesIntoChats(_ messages: [Message], _ isAdmin: Bool) -> [Chat] {
         var chats = [Chat]()
         
         for message in messages {
@@ -80,8 +82,15 @@ class ChatManager: ObservableObject {
                 }
             // Otherwise create new chat
             } else {
-                // Sort users alphabetically
-                let users = [message.username_from ?? "", message.username_to ?? ""].sorted()
+                var users = [String]()
+                if (isAdmin) {
+                    // Sort users alphabetically
+                    users = [message.username_from ?? "", message.username_to ?? ""].sorted()
+                } else {
+                    // Keep "from" first so it's displayed in Chat view
+                    users = [message.username_from ?? "", message.username_to ?? ""]
+                }
+                
                 let chat = Chat(user1: users[0], user2: users[1], dateOfLastMessage: message.timestamp, messages: [message])
 
                 chats.append(chat)
