@@ -15,7 +15,7 @@ struct UserMenu: View {
             Button("Admin", action: {
                 self.chatManager.getMessages(true)
             })
-            Button("kyle_ski", action: {
+            Button(ChatManager.userName, action: {
                 self.chatManager.getMessages(false)
             })
         } label: {

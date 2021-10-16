@@ -10,8 +10,7 @@ import Combine
 
 class ChatManager: ObservableObject {
     static let shared = ChatManager()
-    
-    private let userName = "kyle_ski"
+    static let userName = "kyle_ski"
     
     let objectWillChange = PassthroughSubject<Void, Never>()
     
@@ -56,7 +55,7 @@ class ChatManager: ObservableObject {
                     
                     if (!isAdmin) {
                         self.chats = self.chats.filter {
-                            $0.filterByUser(self.userName)
+                            $0.filterByUser(ChatManager.userName)
                         }
                     }
                     
