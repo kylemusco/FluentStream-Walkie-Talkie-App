@@ -23,6 +23,6 @@ struct UserMessageView: View {
     }
     
     func getUser() -> String {
-        return self.chat.user1 != ChatManager.userName ? self.chat.user1 : self.chat.user2
+        return self.chat.user1 != ChatViewModel.userName ? self.chat.user1 : self.chat.user2
     }
 }

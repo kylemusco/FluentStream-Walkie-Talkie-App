@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct UserMenu: View {
-    private var chatManager = ChatManager.shared
+    private var chatManager = ChatViewModel.shared
     
     var body: some View {
         Menu {
             Button("Admin", action: {
                 self.chatManager.getMessages(true)
             })
-            Button(ChatManager.userName, action: {
+            Button(ChatViewModel.userName, action: {
                 self.chatManager.getMessages(false)
             })
         } label: {
