@@ -18,7 +18,7 @@ struct MessageItem: View {
                 // TODO: Get actual audio length
                 Text("0:26")
                 Waveforms()
-                PlayButton()
+                PlayButton(url: URL(string: Constants.URL + message.recording)!)
             }
             .padding(10)
             // Add buffer on edges
@@ -26,13 +26,12 @@ struct MessageItem: View {
             .padding(.trailing, 5)
             
             .foregroundColor(isCurrentUser ? Color.white : Color.black)
-            .background(isCurrentUser ? Color.blue : Color(UIColor(red: 240/255, green: 240/255, blue: 240/255, alpha: 1.0)))
+            .background(isCurrentUser ? Color.blue : Color.grayMessage)
             .cornerRadius(20)
             
             // Timestamp
             ChatTime(date: message.timestamp)
                 .padding(.trailing, 10)
         }
-        
     }
 }

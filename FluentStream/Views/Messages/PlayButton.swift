@@ -9,8 +9,9 @@ import SwiftUI
 import AVKit
 
 struct PlayButton: View {
-    @State var audioPlayer: AVAudioPlayer!
+    var url: URL
     
+    @State var audioPlayer: AVPlayer!
     @State private var isPlaying = false
     
     var body: some View {
@@ -23,8 +24,8 @@ struct PlayButton: View {
                     Image(systemName: "play.circle")
                 }
                 .onAppear {
-                    let sound = NSDataAsset(name: "sample_recording")?.data
-                    self.audioPlayer = try! AVAudioPlayer(data: sound!)
+                    let playerItem = AVPlayerItem(url: url)
+                    self.audioPlayer = AVPlayer(playerItem:playerItem)
                 }
             } else {
                 Button(action: {
