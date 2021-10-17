@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct UserMenu: View {
-    private var chatManager = ChatViewModel.shared
+    @ObservedObject private var chatManager = ChatViewModel()
     
     var body: some View {
         Menu {

@@ -10,7 +10,7 @@ import SwiftUI
 let coloredNavAppearance = UINavigationBarAppearance()
 
 struct ChatView: View {
-    @ObservedObject var chatManager = ChatViewModel.shared
+    @ObservedObject var chatManager = ChatViewModel()
     
     @State var searchText: String = ""
     @State var isAdmin: Bool = true {
