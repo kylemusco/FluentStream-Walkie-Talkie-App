@@ -9,23 +9,28 @@ import Foundation
 import Combine
 
 class ChatViewModel: ObservableObject {
-    static let userName = "kyle_ski"
+    // Static username for demo
+    static let username = "kyle_ski"
     
     let objectWillChange = PassthroughSubject<Void, Never>()
     
+    // Data source for "Chats" table
     @Published var chats = [Chat]() {
         willSet { objectWillChange.send() }
     }
     
+    // Loading animation is displayed when "true"
     @Published var isLoading: Bool = false {
         willSet { objectWillChange.send() }
     }
     
+    // Error alert is displayed when set
     @Published var error: Error? {
         willSet { objectWillChange.send() }
     }
     
     init() {
+        // Load messages as admin by default
         self.getMessages(true)
     }
     
@@ -65,7 +70,7 @@ class ChatViewModel: ObservableObject {
                     // Sort users based on permission
                     if (!isAdmin) {
                         self.chats = self.chats.filter {
-                            $0.filterByUser(ChatViewModel.userName)
+                            $0.filterByUser(ChatViewModel.username)
                         }
                     }
                     

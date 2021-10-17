@@ -85,7 +85,7 @@ struct ChatView: View {
                         Button("Admin", action: {
                             self.isAdmin = true
                         })
-                        Button(ChatViewModel.userName, action: {
+                        Button(ChatViewModel.username, action: {
                             self.isAdmin = false
                         })
                     } label: {
