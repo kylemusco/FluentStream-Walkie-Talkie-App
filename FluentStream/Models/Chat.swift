@@ -8,14 +8,12 @@
 import Foundation
 
 class Chat: NSObject {
-    var user1: String
-    var user2: String
+    var users: [String]
     var dateOfLastMessage: Date
     var messages: [Message]
     
-    init(user1: String, user2: String, dateOfLastMessage: Date, messages: [Message]) {
-        self.user1 = user1
-        self.user2 = user2
+    init(users: [String], dateOfLastMessage: Date, messages: [Message]) {
+        self.users = users
         self.dateOfLastMessage = dateOfLastMessage
         self.messages = messages
     }
@@ -29,14 +27,14 @@ class Chat: NSObject {
         let dateAsString = DateFormatterUtility.format(date: self.dateOfLastMessage).lowercased()
         
         return (
-            self.user1.lowercased().contains(predicate) ||
-            self.user2.lowercased().contains(predicate) ||
+            self.users[0].lowercased().contains(predicate) ||
+            self.users[1].lowercased().contains(predicate) ||
             dateAsString.contains(predicate)
         )
     }
     
     // Returns true if chat includes a specific user
     func filterByUser(_ user: String) -> Bool {
-        return self.user1.lowercased() == user.lowercased() || self.user2.lowercased() == user.lowercased()
+        return self.users[0].lowercased() == user.lowercased() || self.users[1].lowercased() == user.lowercased()
     }
 }

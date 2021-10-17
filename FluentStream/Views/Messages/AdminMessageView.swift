@@ -13,14 +13,14 @@ struct AdminMessageView: View {
     var body: some View {
         VStack {
             HStack {
-                BoldText(text: chat.user1)
+                BoldText(text: chat.users[0])
                 Spacer()
-                BoldText(text: chat.user2)
+                BoldText(text: chat.users[1])
             }
             .frame(height: 10)
             .padding(.bottom, 30)
             
-            MessageView(messages: chat.messages, currentUser: chat.user2)
+            MessageView(messages: chat.messages, currentUser: chat.users[1])
         }
         .padding(20)
         .frame(maxWidth: .infinity, maxHeight: .infinity)

@@ -9,7 +9,6 @@ import Foundation
 import Combine
 
 class ChatViewModel: ObservableObject {
-    static let shared = ChatViewModel()
     static let userName = "kyle_ski"
     
     let objectWillChange = PassthroughSubject<Void, Never>()
@@ -22,17 +21,27 @@ class ChatViewModel: ObservableObject {
         willSet { objectWillChange.send() }
     }
     
+    @Published var error: Error? {
+        willSet { objectWillChange.send() }
+    }
+    
     init() {
         self.getMessages(true)
     }
     
     // Queries "/history" endpoint for messages
     func getMessages(_ isAdmin: Bool) {
-        isLoading = true
+        // Set to "true" so loading animation is displayed
+        self.isLoading = true
         
         URLSession.shared.dataTask(with: URL(string:Constants.URL + "/history")!) { (data, response, error) in
             guard let data = data, error == nil else {
                 print("Error querying history")
+                
+                // Set error to trigger alert in view
+                self.error = error
+                self.isLoading = false
+                
                 return
             }
             
@@ -48,17 +57,19 @@ class ChatViewModel: ObservableObject {
                         
                         return Date(timeIntervalSince1970: TimeInterval(dateAsInt))
                     })
-                    
+                    // Convert from JSON array into array of Message objects
                     let messages = try decoder.decode([Message].self, from: data)
                     
                     self.chats = self.sortMessagesIntoChats(messages, isAdmin)
                     
+                    // Sort users based on permission
                     if (!isAdmin) {
                         self.chats = self.chats.filter {
                             $0.filterByUser(ChatViewModel.userName)
                         }
                     }
                     
+                    // Hide loading animation
                     self.isLoading = false
                 } catch {
                     print("Error decoding messages: ", error)
@@ -90,7 +101,7 @@ class ChatViewModel: ObservableObject {
                     users = [message.username_from ?? "", message.username_to ?? ""]
                 }
                 
-                let chat = Chat(user1: users[0], user2: users[1], dateOfLastMessage: message.timestamp, messages: [message])
+                let chat = Chat(users: users, dateOfLastMessage: message.timestamp, messages: [message])
 
                 chats.append(chat)
             }
@@ -105,8 +116,8 @@ class ChatViewModel: ObservableObject {
     // Returns existing chat object or nil for given usernames
     private func getChatForUsers(user1: String, user2: String, chats: [Chat]) -> Chat? {
         for c in chats {
-            if ((c.user1 == user1 && c.user2 == user2) ||
-                (c.user1 == user2 && c.user2 == user1)) {
+            if ((c.users[0] == user1 && c.users[1] == user2) ||
+                (c.users[0] == user2 && c.users[1] == user1)) {
                 return c
             }
         }

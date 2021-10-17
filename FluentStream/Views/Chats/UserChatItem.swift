@@ -21,7 +21,7 @@ struct UserChatItem: View {
             
             // Username and last message time
             VStack(alignment: .leading) {
-                ChatUser(user: chat.user1)
+                ChatUser(user: chat.users[0])
                 
                 HStack {
                     Text("Last message:")

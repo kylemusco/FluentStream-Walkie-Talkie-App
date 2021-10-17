@@ -12,7 +12,7 @@ struct UserMessageView: View {
     
     var body: some View {
         VStack {
-            MessageView(messages: chat.messages, currentUser: chat.user2)
+            MessageView(messages: chat.messages, currentUser: chat.users[1])
         }
         .padding(30)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -23,6 +23,6 @@ struct UserMessageView: View {
     }
     
     func getUser() -> String {
-        return self.chat.user1 != ChatViewModel.userName ? self.chat.user1 : self.chat.user2
+        return self.chat.users[0] != ChatViewModel.userName ? self.chat.users[0] : self.chat.users[1]
     }
 }

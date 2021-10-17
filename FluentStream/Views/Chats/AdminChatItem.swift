@@ -13,8 +13,8 @@ struct AdminChatItem: View {
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
-                ChatUser(user: chat.user1)
-                ChatUser(user: chat.user2)
+                ChatUser(user: chat.users[0])
+                ChatUser(user: chat.users[1])
             }
             .frame(width: 175)
             .padding(.leading, 15)
