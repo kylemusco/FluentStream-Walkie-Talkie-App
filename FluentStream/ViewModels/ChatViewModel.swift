@@ -41,7 +41,7 @@ class ChatViewModel: ObservableObject {
         
         URLSession.shared.dataTask(with: URL(string:Constants.URL + "/history")!) { (data, response, error) in
             guard let data = data, error == nil else {
-                print("Error querying history")
+                print("Error querying history: ", error!)
                 
                 // Set error to trigger alert in view
                 self.error = error
