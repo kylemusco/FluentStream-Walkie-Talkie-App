@@ -20,9 +20,12 @@ class Chat: NSObject {
         self.messages = messages
     }
     
+    // MARK: Helper Functions
+    
+    // Checks for matching users or date of last message
+    // Returns true if chat matches search criteria
     func filter(_ text: String) -> Bool {
         let predicate = text.lowercased()
-        
         let dateAsString = DateFormatterUtility.format(date: self.dateOfLastMessage).lowercased()
         
         return (
@@ -32,6 +35,7 @@ class Chat: NSObject {
         )
     }
     
+    // Returns true if chat includes a specific user
     func filterByUser(_ user: String) -> Bool {
         return self.user1.lowercased() == user.lowercased() || self.user2.lowercased() == user.lowercased()
     }
