@@ -73,12 +73,15 @@ class ChatViewModel: ObservableObject {
                             $0.filterByUser(ChatViewModel.username)
                         }
                     }
-                    
-                    // Hide loading animation
-                    self.isLoading = false
                 } catch {
                     print("Error decoding messages: ", error)
+                    
+                    // Set error to trigger alert in view
+                    self.error = error
                 }
+                
+                // Hide loading animation
+                self.isLoading = false
             }
         }.resume()
     }
