@@ -9,5 +9,5 @@ import Foundation
 
 struct Constants {
     // MARK: URLs
-    static let URL = "http://10.0.0.70:3000"
+    static let URL = "http://10.0.0.71:3000"
 }

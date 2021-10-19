@@ -12,9 +12,11 @@ struct SearchBar: View {
     
     var body: some View {
         HStack {
+            // Magnifying glass icon
             Image(systemName: "magnifyingglass")
                 .foregroundColor(.gray)
             
+            // Text input
             TextField("Search", text: $searchText)
                 .modifier(ClearButton(text: $searchText))
                 .disableAutocorrection(true)

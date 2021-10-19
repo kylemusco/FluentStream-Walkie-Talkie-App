@@ -15,17 +15,18 @@ struct MessageItem: View {
         VStack(alignment: .trailing) {
             // Message body
             HStack {
-                // TODO: Get actual audio length
                 Text("0:26")
                 Waveforms()
                 PlayButton(url: URL(string: Constants.URL + message.recording)!)
             }
             .padding(10)
-            // Add buffer on edges
             .padding(.leading, 5)
             .padding(.trailing, 5)
             
+            // Set text to white if message is from current user, otherwise black
             .foregroundColor(isCurrentUser ? Color.white : Color.black)
+            
+            // Set background to blue if message is from current user, otherwise gray
             .background(isCurrentUser ? Color.blue : Color.grayMessage)
             .cornerRadius(20)
             

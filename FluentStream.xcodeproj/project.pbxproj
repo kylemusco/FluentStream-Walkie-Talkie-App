@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5511CA46271CC41000D1F54C /* UserNavigationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5511CA45271CC41000D1F54C /* UserNavigationLink.swift */; };
 		557FD59D270E903D002B188F /* FluentStreamApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557FD59C270E903D002B188F /* FluentStreamApp.swift */; };
 		557FD59F270E903D002B188F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557FD59E270E903D002B188F /* ContentView.swift */; };
 		557FD5A1270E9040002B188F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 557FD5A0270E9040002B188F /* Assets.xcassets */; };
@@ -87,6 +88,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5511CA45271CC41000D1F54C /* UserNavigationLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNavigationLink.swift; sourceTree = "<group>"; };
 		557FD599270E903D002B188F /* FluentStream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FluentStream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		557FD59C270E903D002B188F /* FluentStreamApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FluentStreamApp.swift; sourceTree = "<group>"; };
 		557FD59E270E903D002B188F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 				55BF3A6427151BBB0036B223 /* SearchBar.swift */,
 				55B0F4F52717C73900E246F0 /* UserChatItem.swift */,
 				55B0F4F12717B90000E246F0 /* UserMenu.swift */,
+				5511CA45271CC41000D1F54C /* UserNavigationLink.swift */,
 			);
 			path = Chats;
 			sourceTree = "<group>";
@@ -440,6 +443,7 @@
 				55F6BE89270FBB7C00243799 /* DateFormatterUtility.swift in Sources */,
 				557FD59F270E903D002B188F /* ContentView.swift in Sources */,
 				559DEFCF271B388B008E5981 /* AdminNavigationLink.swift in Sources */,
+				5511CA46271CC41000D1F54C /* UserNavigationLink.swift in Sources */,
 				55F6BEA2270FDF9500243799 /* MessageView.swift in Sources */,
 				55B0F4F62717C73900E246F0 /* UserChatItem.swift in Sources */,
 				55F6BE8D270FBFDA00243799 /* Extensions.swift in Sources */,

@@ -10,12 +10,12 @@ import SwiftUI
 let coloredNavAppearance = UINavigationBarAppearance()
 
 struct ChatView: View {
-    @ObservedObject var chatManager = ChatViewModel()
+    @ObservedObject var chatViewModel = ChatViewModel()
     
     @State var searchText: String = ""
     @State var isAdmin: Bool = true {
         didSet {
-            self.chatManager.getMessages(self.isAdmin)
+            self.chatViewModel.getMessages(self.isAdmin)
         }
     }
     
@@ -40,11 +40,11 @@ struct ChatView: View {
             ScrollView {
                 // Handles swipe down gesture to trigger refresh
                 PullToRefreshView(coordinateSpaceName: "pullToRefresh") {
-                    self.chatManager.getMessages(isAdmin)
+                    self.chatViewModel.getMessages(isAdmin)
                 }
                 
                 // Display loading message if app is loading chats
-                if (chatManager.isLoading) {
+                if (chatViewModel.isLoading) {
                     ChatViewLoadingAnimation()
                 }
                 // Otherwise display chats
@@ -53,26 +53,15 @@ struct ChatView: View {
                         .padding(.leading, 20)
                         .padding(.trailing, 20)
                     
-                    ForEach(chatManager.chats.filter {
+                    // Filter chats by search criteria
+                    ForEach(chatViewModel.chats.filter {
                         searchText.isEmpty || $0.filter(searchText)
                     }, id:\.self) { chat in
-                        
-                        NavigationLink {
-                            if (self.isAdmin) {
-                                AdminMessageView(chat: chat)
-                            } else {
-                                UserMessageView(chat: chat)
-                            }
-                        } label: {
-                            if (self.isAdmin) {
-                                AdminChatItem(chat: chat)
-                            } else {
-                                UserChatItem(chat: chat)
-                            }
+                        if (self.isAdmin) {
+                            AdminNavigationLink(chat: chat)
+                        } else {
+                            UserNavigationLink(chat: chat)
                         }
-                        .padding(.leading, -70)
-                        .padding(.trailing, -70)
-                        .buttonStyle(PlainButtonStyle())
                     }
                 }
             }

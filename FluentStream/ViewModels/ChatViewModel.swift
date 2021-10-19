@@ -91,7 +91,9 @@ class ChatViewModel: ObservableObject {
         
         for message in messages {
             // If chat exists, add message
-            if let chat = self.getChatForUsers(user1: message.username_to ?? "", user2: message.username_from ?? "", chats: chats) {
+            if let chat = self.getChatForUsers(user1: message.username_to ?? "",
+                                               user2: message.username_from ?? "",
+                                               chats: chats) {
                 chat.messages.append(message)
 
                 // Check for last message
