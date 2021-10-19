@@ -28,6 +28,40 @@
 		557FD5DC270E93B2002B188F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557FD5DA270E93B2002B188F /* Constants.swift */; };
 		557FD5DD270E93B2002B188F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557FD5DA270E93B2002B188F /* Constants.swift */; };
 		559DEFCF271B388B008E5981 /* AdminNavigationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559DEFCE271B388B008E5981 /* AdminNavigationLink.swift */; };
+		55AADF89271F66FB00E3F443 /* BoldText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BF3A5A271506EA0036B223 /* BoldText.swift */; };
+		55AADF8A271F66FC00E3F443 /* BoldText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BF3A5A271506EA0036B223 /* BoldText.swift */; };
+		55AADF8B271F670300E3F443 /* ChatDateSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B0F4F72717CAFD00E246F0 /* ChatDateSmall.swift */; };
+		55AADF8C271F670300E3F443 /* ChatDateSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B0F4F72717CAFD00E246F0 /* ChatDateSmall.swift */; };
+		55AADF8D271F670600E3F443 /* ChatTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BF3A5C271508840036B223 /* ChatTime.swift */; };
+		55AADF8E271F670600E3F443 /* ChatTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BF3A5C271508840036B223 /* ChatTime.swift */; };
+		55AADF8F271F670B00E3F443 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BF3A6627151D2E0036B223 /* Colors.swift */; };
+		55AADF90271F670B00E3F443 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BF3A6627151D2E0036B223 /* Colors.swift */; };
+		55AADF91271F671200E3F443 /* AdminNavigationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559DEFCE271B388B008E5981 /* AdminNavigationLink.swift */; };
+		55AADF92271F671200E3F443 /* AdminNavigationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559DEFCE271B388B008E5981 /* AdminNavigationLink.swift */; };
+		55AADF93271F671600E3F443 /* ClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BF3A68271523B90036B223 /* ClearButton.swift */; };
+		55AADF94271F671600E3F443 /* ClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BF3A68271523B90036B223 /* ClearButton.swift */; };
+		55AADF95271F671900E3F443 /* ChatViewLoadingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E4064A2715001D00F8036A /* ChatViewLoadingAnimation.swift */; };
+		55AADF96271F671900E3F443 /* ChatViewLoadingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E4064A2715001D00F8036A /* ChatViewLoadingAnimation.swift */; };
+		55AADF97271F671C00E3F443 /* PullToRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BF3A622715117C0036B223 /* PullToRefreshView.swift */; };
+		55AADF98271F671D00E3F443 /* PullToRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BF3A622715117C0036B223 /* PullToRefreshView.swift */; };
+		55AADF99271F672000E3F443 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BF3A6427151BBB0036B223 /* SearchBar.swift */; };
+		55AADF9A271F672000E3F443 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BF3A6427151BBB0036B223 /* SearchBar.swift */; };
+		55AADF9B271F672200E3F443 /* UserChatItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B0F4F52717C73900E246F0 /* UserChatItem.swift */; };
+		55AADF9C271F672200E3F443 /* UserChatItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B0F4F52717C73900E246F0 /* UserChatItem.swift */; };
+		55AADF9D271F672500E3F443 /* UserMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B0F4F12717B90000E246F0 /* UserMenu.swift */; };
+		55AADF9E271F672500E3F443 /* UserMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B0F4F12717B90000E246F0 /* UserMenu.swift */; };
+		55AADF9F271F672800E3F443 /* UserNavigationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5511CA45271CC41000D1F54C /* UserNavigationLink.swift */; };
+		55AADFA0271F672800E3F443 /* UserNavigationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5511CA45271CC41000D1F54C /* UserNavigationLink.swift */; };
+		55AADFA1271F672F00E3F443 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BF3A6027150D460036B223 /* PlayButton.swift */; };
+		55AADFA2271F672F00E3F443 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BF3A6027150D460036B223 /* PlayButton.swift */; };
+		55AADFA3271F673100E3F443 /* UserMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B0F4F32717C64500E246F0 /* UserMessageView.swift */; };
+		55AADFA4271F673200E3F443 /* UserMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B0F4F32717C64500E246F0 /* UserMessageView.swift */; };
+		55AADFA5271F673400E3F443 /* Waveforms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BF3A5E27150B300036B223 /* Waveforms.swift */; };
+		55AADFA6271F673400E3F443 /* Waveforms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BF3A5E27150B300036B223 /* Waveforms.swift */; };
+		55AADFA7271F673900E3F443 /* FluentStreamApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557FD59C270E903D002B188F /* FluentStreamApp.swift */; };
+		55AADFA8271F673900E3F443 /* FluentStreamApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557FD59C270E903D002B188F /* FluentStreamApp.swift */; };
+		55AADFA9271F673B00E3F443 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557FD59E270E903D002B188F /* ContentView.swift */; };
+		55AADFAA271F673B00E3F443 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557FD59E270E903D002B188F /* ContentView.swift */; };
 		55B0F4F22717B90000E246F0 /* UserMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B0F4F12717B90000E246F0 /* UserMenu.swift */; };
 		55B0F4F42717C64500E246F0 /* UserMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B0F4F32717C64500E246F0 /* UserMessageView.swift */; };
 		55B0F4F62717C73900E246F0 /* UserChatItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B0F4F52717C73900E246F0 /* UserChatItem.swift */; };
@@ -460,16 +494,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55AADFA5271F673400E3F443 /* Waveforms.swift in Sources */,
 				55F6BE86270FBB2C00243799 /* ChatDate.swift in Sources */,
+				55AADF8F271F670B00E3F443 /* Colors.swift in Sources */,
+				55AADFA7271F673900E3F443 /* FluentStreamApp.swift in Sources */,
+				55AADFA1271F672F00E3F443 /* PlayButton.swift in Sources */,
+				55AADFA3271F673100E3F443 /* UserMessageView.swift in Sources */,
 				55F6BE82270FBA8500243799 /* ChatUser.swift in Sources */,
 				55F6BE9F270FDD8E00243799 /* MessageItem.swift in Sources */,
 				55F6BE7D270FB7D400243799 /* AdminChatItem.swift in Sources */,
+				55AADF89271F66FB00E3F443 /* BoldText.swift in Sources */,
+				55AADF8B271F670300E3F443 /* ChatDateSmall.swift in Sources */,
+				55AADFA9271F673B00E3F443 /* ContentView.swift in Sources */,
+				55AADF93271F671600E3F443 /* ClearButton.swift in Sources */,
+				55AADFA0271F672800E3F443 /* UserNavigationLink.swift in Sources */,
+				55AADF9D271F672500E3F443 /* UserMenu.swift in Sources */,
+				55AADF91271F671200E3F443 /* AdminNavigationLink.swift in Sources */,
+				55AADF8D271F670600E3F443 /* ChatTime.swift in Sources */,
 				557FD5DC270E93B2002B188F /* Constants.swift in Sources */,
 				55F6BE8A270FBB7C00243799 /* DateFormatterUtility.swift in Sources */,
 				557FD5AE270E9040002B188F /* FluentStreamTests.swift in Sources */,
 				557FD5CD270E918B002B188F /* Chat.swift in Sources */,
+				55AADF95271F671900E3F443 /* ChatViewLoadingAnimation.swift in Sources */,
 				557FD5C9270E90E0002B188F /* Message.swift in Sources */,
+				55AADF99271F672000E3F443 /* SearchBar.swift in Sources */,
+				55AADF97271F671C00E3F443 /* PullToRefreshView.swift in Sources */,
 				55F6BE75270FB51A00243799 /* ChatView.swift in Sources */,
+				55AADF9B271F672200E3F443 /* UserChatItem.swift in Sources */,
 				55F6BE8E270FBFDA00243799 /* Extensions.swift in Sources */,
 				55F6BE9A270FDA7700243799 /* AdminMessageView.swift in Sources */,
 				55F6BEA3270FDF9500243799 /* MessageView.swift in Sources */,
@@ -482,20 +533,37 @@
 			buildActionMask = 2147483647;
 			files = (
 				557FD5D8270E9275002B188F /* ChatViewModel.swift in Sources */,
+				55AADFA2271F672F00E3F443 /* PlayButton.swift in Sources */,
+				55AADFAA271F673B00E3F443 /* ContentView.swift in Sources */,
 				557FD5CA270E90E0002B188F /* Message.swift in Sources */,
 				55F6BEA0270FDD8E00243799 /* MessageItem.swift in Sources */,
 				557FD5CE270E918B002B188F /* Chat.swift in Sources */,
 				55F6BE9B270FDA7700243799 /* AdminMessageView.swift in Sources */,
+				55AADF9A271F672000E3F443 /* SearchBar.swift in Sources */,
 				55F6BE87270FBB2C00243799 /* ChatDate.swift in Sources */,
+				55AADF96271F671900E3F443 /* ChatViewLoadingAnimation.swift in Sources */,
+				55AADF9F271F672800E3F443 /* UserNavigationLink.swift in Sources */,
 				55F6BE83270FBA8500243799 /* ChatUser.swift in Sources */,
+				55AADF92271F671200E3F443 /* AdminNavigationLink.swift in Sources */,
 				55F6BE8B270FBB7C00243799 /* DateFormatterUtility.swift in Sources */,
+				55AADF9C271F672200E3F443 /* UserChatItem.swift in Sources */,
 				557FD5BA270E9040002B188F /* FluentStreamUITestsLaunchTests.swift in Sources */,
 				55F6BEA4270FDF9500243799 /* MessageView.swift in Sources */,
+				55AADF98271F671D00E3F443 /* PullToRefreshView.swift in Sources */,
 				55F6BE8F270FBFDA00243799 /* Extensions.swift in Sources */,
+				55AADFA8271F673900E3F443 /* FluentStreamApp.swift in Sources */,
 				55F6BE76270FB51A00243799 /* ChatView.swift in Sources */,
+				55AADF94271F671600E3F443 /* ClearButton.swift in Sources */,
+				55AADF90271F670B00E3F443 /* Colors.swift in Sources */,
+				55AADF9E271F672500E3F443 /* UserMenu.swift in Sources */,
 				557FD5B8270E9040002B188F /* FluentStreamUITests.swift in Sources */,
 				55F6BE7E270FB7D400243799 /* AdminChatItem.swift in Sources */,
+				55AADF8E271F670600E3F443 /* ChatTime.swift in Sources */,
+				55AADF8C271F670300E3F443 /* ChatDateSmall.swift in Sources */,
 				557FD5DD270E93B2002B188F /* Constants.swift in Sources */,
+				55AADF8A271F66FC00E3F443 /* BoldText.swift in Sources */,
+				55AADFA6271F673400E3F443 /* Waveforms.swift in Sources */,
+				55AADFA4271F673200E3F443 /* UserMessageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -700,7 +768,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8NDMC39GJ5;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -725,7 +793,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8NDMC39GJ5;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
