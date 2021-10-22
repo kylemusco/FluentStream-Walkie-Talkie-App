@@ -26,6 +26,14 @@ class ChatViewModel: ObservableObject {
     
     // Error alert is displayed when set
     @Published var error: Error? {
+        willSet {
+            self.hasError = true
+            objectWillChange.send()
+            
+        }
+    }
+    
+    @Published var hasError: Bool = false {
         willSet { objectWillChange.send() }
     }
     

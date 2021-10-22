@@ -83,6 +83,14 @@ struct ChatView: View {
                     }
                 }
             }
+            .alert(isPresented: $chatViewModel.hasError) {
+                // Display alert if server throws error
+                Alert(
+                    title: Text("Error"),
+                    message: Text("There was as an error loading chats"),
+                    dismissButton: .default(Text("OK"))
+                )
+            }
         }
     }
 }
