@@ -19,6 +19,8 @@ node app.js
 
 Before running the app, open `Utilities/Constants.swift` and set `URL` to the IP address of the backend
 
+<br />
+
 ## The Problem
 
 The goal of this exercise is to understand how you think and work through problems which may not have a clearly defined go-forward path. As this is a senior role, it is our expectation that you are able to discover a user’s needs, technology’s constraints, and choose the best path forward. 
@@ -45,9 +47,13 @@ The skills we are assessing in this process are:
 Please track the effort you invest in this and keep us updated. We know this is not full time, and a significant hurdle to ask of many people - so it is useful to know how much time you have spent on it. We would expect this to take a few days of wall-clock time (ideally no more than a week), and a few hours of CPU time. As we are also very busy, there will no doubt be delays on both sides as we work on this together.  Please set expectations as you would in your job!
 Finally, once you have finished this and worked through it with an engineer, you’ll present the project to us in a Zoom group call.
 
+<br />
+
 ## Screenshots
 
-![Chat View](https://kylemusco.github.io/img/FluentStream/Chats%20View.png)![Message View](https://kylemusco.github.io/img/FluentStream/Message%20View.png)
+![Chat View](https://kylemusco.github.io/img/FluentStream/Chats%20View.png)   ![Message View](https://kylemusco.github.io/img/FluentStream/Message%20View.png)
+
+<br />
 
 ## Presentation
 
